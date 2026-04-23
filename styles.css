@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #8c54fb;
+}
+
+main {
+    background-color: white;
+    border-radius: 10px;
+    width: 300px;
+    height: 530px;
+    margin-bottom: 40px;
+}
+
+#titlle-1 {
+    font-size: 26px;
+    text-align: center;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+#moeda-1 {
+    margin: 1px 0 20px 0;
+    width: 265px;
+    height: 4vh;
+    border-radius: 6px;
+    border: 1.3px solid black;
+    outline: none;
+}
+
+#moeda-2 {
+    margin: 1px 0 20px 0px;
+    width: 265px;
+    height: 4vh;
+    border-radius: 6px;
+    border: 1.3px solid black;
+    outline: none;
+}
+
+#valor {
+    margin: 1px 0 4px 0;
+    width: 265px;
+    height: 4vh;
+    border-radius: 6px;
+    border: 1.3px solid black;
+    display: flex;
+    justify-content: center;
+    outline: none;
+}
+
+#moeda-1:hover {
+    border: 1.5px solid #631fec;
+}
+
+#moeda-1:focus {
+    border: 2px solid #8c54fb;
+}
+
+#moeda-2:hover {
+    border: 1.5px solid #631fec;
+}
+
+#moeda-2:focus {
+    border: 2px solid #8c54fb;
+}
+
+#valor:hover {
+    border: 1.5px solid #8c54fb;
+}
+
+#valor:focus {
+    border: 1.5px solid #631fec;
+}
+
+.paragraph {
+    margin-left: 18px;
+}
+
+.divs {
+    display: flex;
+    justify-content: center;
+}
+
+#botao-converter {
+    width: 200px;
+    height: 30px;
+    font-weight: 630;
+    border: 1.4px solid black;
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: #8c54fb;
+    outline: none;
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+#botao-converter:hover {
+    background-color: #8044f8;
+    cursor: pointer;
+}
+
+#botao-converter:active {
+    background-color: #7936fd;
+}
+
+#resultado {
+    border: #7936fd solid 1.4px;
+    border-radius: 8px;
+    margin: 15px 0 20px 40px;
+    width: 220px;
+    height: 240px;
+}
+
+.img-valor {
+    margin-top: 7px;
+}
+
+.seta {
+    margin: 7px 0;
+}
+
+#tudo-valor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
