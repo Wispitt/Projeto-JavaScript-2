@@ -13,31 +13,31 @@
 </head>
 
 <body>
-    <img width="200" src="./assets/logo.gif" alt="duas-mãos-uma-segurando-dinheiro">
+    <img id="logo-img" width="200" src="./assets/logo.gif" alt="duas-mãos-uma-segurando-dinheiro">
     <main>
         <h1 id="titlle-1">Conversor de moedas</h1>
         <p class="paragraph">Converter de:</p>
         <div class="divs">
             <select id="moeda-1">
-                <option>R$ Real Brasileiro (BRL)</option>
-                <option>US$ Dólar Americano (USD)</option>
-                <option>Euro (EUR)</option>
-                <option>Libra Esterlina (GBP)</option>
-                <option>Iene Japonês (JPY)</option>
-                <option>Franco Suíço (CHF)</option>
-                <option>Yuan Chinês (CNY)</option>
+                <option value="real">R$ Real Brasileiro (BRL)</option>
+                <option value="dolar">US$ Dólar Americano (USD)</option>
+                <option value="euro">€ Euro (EUR)</option>
+                <option value="coin">₿ Bitcoin (BTC)</option>
+                <option value="libra">£ Libra Esterlina (GBP)</option>
+                <option value="iene">¥ Iene Japonês (JPY)</option>
+                <option value="yuan">¥ Yuan Chinês (CNY)</option>
             </select>
         </div>
         <p class="paragraph">Converter para:</p>
         <div class="divs">
             <select id="moeda-2">
-                <option>R$ Real Brasileiro (BRL)</option>
-                <option>US$ Dólar Americano (USD)</option>
-                <option>Euro (EUR)</option>
-                <option>Libra Esterlina (GBP)</option>
-                <option>Iene Japonês (JPY)</option>
-                <option>Franco Suíço (CHF)</option>
-                <option>Yuan Chinês (CNY)</option>
+                <option value="dolar">US$ Dólar Americano (USD)</option>
+                <option value="real">R$ Real Brasileiro (BRL)</option>
+                <option value="euro">€ Euro (EUR)</option>
+                <option value="coin">₿ Bitcoin (BTC)</option>
+                <option value="libra">£ Libra Esterlina (GBP)</option>
+                <option value="iene">¥ Iene Japonês (JPY)</option>
+                <option value="yuan">¥ Yuan Chinês (CNY)</option>
             </select>
         </div>
         <p class="paragraph">Valor:</p>
@@ -50,17 +50,17 @@
 
         <section id="resultado">
             <div id="tudo-valor">
-                <img width="40" class="img-valor" src="./assets/brasil 2 (1).png" alt="bandeira-do-brasil">
-                <p class="paragraph-valor">Real</p>
-                <h3 class="resultado-valor">R$ 10.000,00</h3>
+                <img width="40" class="img-valor-1" src="./assets/brasil 2 (1).png" alt="bandeira-do-brasil">
+                <p class="paragraph-valor-1">Real</p>
+                <h3 class="resultado-valor-1">R$ 0,00</h3>
                 <img width="23" class="seta" src="./assets/Vector.png" alt="seta-para-baixo">
-                <img width="40" class="img-valor" src="./assets/estados-unidos.png" alt="bandeira-do-EUA">
-                <p class="paragraph-valor">Dólar Americano</p>
-                <h3 class="resultado-valor">US$ 2.000,00</h3>
+                <img width="40" class="img-valor-2" src="./assets/estados-unidos.png" alt="bandeira-do-EUA">
+                <p class="paragraph-valor-2">Dólar Americano</p>
+                <h3 class="resultado-valor-2">US$ 0,00</h3>
             </div>
         </section>
     </main>
-
 </body>
+    <script src="scripts.js"></script>
 
 </html>

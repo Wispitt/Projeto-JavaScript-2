@@ -12,6 +12,10 @@ body {
     background-color: #8c54fb;
 }
 
+#logo-img {
+    margin-top: 20px;
+}
+
 main {
     background-color: white;
     border-radius: 10px;
@@ -34,6 +38,7 @@ main {
     border-radius: 6px;
     border: 1.3px solid black;
     outline: none;
+    cursor: pointer;
 }
 
 #moeda-2 {
@@ -43,6 +48,7 @@ main {
     border-radius: 6px;
     border: 1.3px solid black;
     outline: none;
+    cursor: pointer;
 }
 
 #valor {
@@ -118,7 +124,7 @@ main {
     height: 240px;
 }
 
-.img-valor {
+.img-valor-1, .img-valor-2 {
     margin-top: 7px;
 }
 
