@@ -2,13 +2,126 @@
 
 
 const botao = document.querySelector("#botao-converter");
-botao.onclick = () => {
-    const currecyMoeda1 = document.querySelector("#moeda-1").value;
-    const currecyMoeda2 = document.querySelector("#moeda-2").value;
-    const input = document.querySelector("#valor").value;
+const currecyMoeda2 = document.querySelector("#moeda-2");
+const paragraphCurrency2 = document.querySelector(".paragraph-valor-2");
 
+function currencyTodos() {
+    const currecyMoeda1 = document.querySelector("#moeda-1");
+    const input = document.querySelector("#valor").value;
     const paragraphCurrency1 = document.querySelector(".paragraph-valor-1");
-    const paragraphCurrency2 = document.querySelector(".paragraph-valor-2");
+    const imgResultado1 = document.querySelector(".img-valor-1");
+    const imgResultado2 = document.querySelector(".img-valor-2");
+    const resultado1 = document.querySelector(".resultado-valor-1");
+    const resultado2 = document.querySelector(".resultado-valor-2");
+
+    const valorDolar = 5.2;
+    const valorEuro = 5.88;
+    const valorBitcoin = 386.07056;
+    const valorLibra = 6.72;
+
+    if (currecyMoeda2.value === "dolar") {
+        paragraphCurrency2.textContent = "Dólar Americano";
+        imgResultado2.src = "./assets/estados-unidos.png";
+        resultado2.textContent = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD"
+        }).format(input / valorDolar);
+    }
+    if (currecyMoeda2.value === "real") {
+        paragraphCurrency2.textContent = "Real";
+        imgResultado2.src = "./assets/brasil 2 (1).png";
+        resultado2.textContent = new Intl.NumberFormat("pt-br", {
+            style: "currency",
+            currency: "BRL"
+        }).format(input);
+    }
+    if (currecyMoeda2.value === "euro") {
+        paragraphCurrency2.textContent = "Euro";
+        imgResultado2.src = "./assets/Euro.png";
+        resultado2.textContent = new Intl.NumberFormat("en-UK", {
+            style: "currency",
+            currency: "EUR"
+        }).format(input / valorEuro);
+    }
+    if (currecyMoeda2.value === "coin") {
+        paragraphCurrency2.textContent = "Bitcoin";
+        imgResultado2.src = "./assets/bitcoin 1.png";
+        resultado2.textContent = new Intl.NumberFormat("pt-SV", {
+            style: "currency",
+            currency: "BTC"
+        }).format(input / valorBitcoin);
+    }
+    if (currecyMoeda2.value === "libra") {
+        paragraphCurrency2.textContent = "Libra Esterlina";
+        imgResultado2.src = "./assets/libra 1.png";
+        resultado2.textContent = new Intl.NumberFormat("en-GB", {
+            style: "currency",
+            currency: "GBP"
+        }).format(input / valorLibra);
+    }
+}
+
+const currecyMoeda1 = document.querySelector("#moeda-1");
+function currencyConverter() {
+    const currecyMoeda1 = document.querySelector("#moeda-1");
+    const input = document.querySelector("#valor").value;
+    const paragraphCurrency1 = document.querySelector(".paragraph-valor-1");
+    const imgResultado1 = document.querySelector(".img-valor-1");
+    const imgResultado2 = document.querySelector(".img-valor-2");
+    const resultado1 = document.querySelector(".resultado-valor-1");
+    const resultado2 = document.querySelector(".resultado-valor-2");
+
+    const valorDolar = 5.2;
+    const valorEuro = 5.88;
+    const valorBitcoin = 386.07056;
+    const valorLibra = 6.72;
+
+    if (currecyMoeda1.value === "dolar") {
+        paragraphCurrency1.textContent = "Dólar Americano";
+        imgResultado1.src = "./assets/estados-unidos.png";
+        resultado1.textContent = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD"
+        }).format(input / valorDolar);
+    }
+    if (currecyMoeda1.value === "real") {
+        paragraphCurrency1.textContent = "Real";
+        imgResultado1.src = "./assets/brasil 2 (1).png";
+        resultado1.textContent = new Intl.NumberFormat("pt-br", {
+            style: "currency",
+            currency: "BRL"
+        }).format(input);
+    }
+    if (currecyMoeda1.value === "euro") {
+        paragraphCurrency1.textContent = "Euro";
+        imgResultado1.src = "./assets/Euro.png";
+        resultado1.textContent = new Intl.NumberFormat("en-UK", {
+            style: "currency",
+            currency: "EUR"
+        }).format(input / valorEuro);
+    }
+    if (currecyMoeda1.value === "coin") {
+        paragraphCurrency1.textContent = "Bitcoin";
+        imgResultado1.src = "./assets/bitcoin 1.png";
+        resultado1.textContent = new Intl.NumberFormat("pt-SV", {
+            style: "currency",
+            currency: "BTC"
+        }).format(input / valorBitcoin);
+    }
+    if (currecyMoeda1.value === "libra") {
+        paragraphCurrency1.textContent = "Libra Esterlina";
+        imgResultado1.src = "./assets/libra 1.png";
+        resultado1.textContent = new Intl.NumberFormat("en-GB", {
+            style: "currency",
+            currency: "GBP"
+        }).format(input / valorLibra);
+    }
+}
+
+function conversorDeCurrency() {
+    const currecyMoeda1 = document.querySelector("#moeda-1");
+    const input = document.querySelector("#valor").value;
+    const paragraphCurrency1 = document.querySelector(".paragraph-valor-1");
 
     const imgResultado1 = document.querySelector(".img-valor-1");
     const imgResultado2 = document.querySelector(".img-valor-2");
@@ -17,97 +130,92 @@ botao.onclick = () => {
     const resultado2 = document.querySelector(".resultado-valor-2");
 
     const valorEuro = 5.88;
-
     const valorDolar = 5.2;
+    const valorBitcoin = 386.07056;
+    const valorLibra = 6.72;
 
-    if (currecyMoeda1 === "real" && currecyMoeda2 === "dolar") {
+    if (currecyMoeda1.value === "real") {
+        paragraphCurrency1.textContent = "Real";
+        imgResultado1.src = "./assets/brasil 2 (1).png";
         resultado1.textContent = new Intl.NumberFormat("pt-br", {
             style: "currency",
             currency: "BRL"
         }).format(input);
-
-        resultado2.textContent = new Intl.NumberFormat("en-US", {
-            style: "currency",
-            currency: "USD"
-        }).format(input / valorDolar)
     }
-
-    if (currecyMoeda2 === "real" && currecyMoeda1 === "dolar") {
-        resultado1.textContent = new Intl.NumberFormat("pt-br", {
+    if (currecyMoeda2.value === "real") {
+        paragraphCurrency2.textContent = "Real";
+        imgResultado2.src = "./assets/brasil 2 (1).png";
+        resultado2.textContent = new Intl.NumberFormat("pt-br", {
             style: "currency",
             currency: "BRL"
         }).format(input);
-
-        resultado2.textContent = new Intl.NumberFormat("en-US", {
-            style: "currency",
-            currency: "USD"
-        }).format(input / valorDolar);
+    }
+    if (currecyMoeda1.value === "dolar") {
+        paragraphCurrency1.textContent = "Dólar Americano";
+        imgResultado1.src = "./assets/estados-unidos.png";
         resultado1.textContent = new Intl.NumberFormat("en-US", {
             style: "currency",
             currency: "USD"
         }).format(input / valorDolar);
-
-        resultado2.textContent = new Intl.NumberFormat("pt-br", {
-            style: "currency",
-            currency: "BRL"
-        }).format(input);
-        paragraphCurrency1.textContent = "Dólar Americano";
-        paragraphCurrency2.textContent = "Real";
-
-        imgResultado1.src = "./assets/estados-unidos.png";
-        imgResultado2.src = "./assets/brasil 2 (1).png";
     }
-
-
-
-
-    if (currecyMoeda2 === "euro" && currecyMoeda1 === "real") {
-        resultado1.textContent = new Intl.NumberFormat("pt-br", {
+    if (currecyMoeda2.value === "dolar") {
+        paragraphCurrency2.textContent = "Dólar Americano";
+        imgResultado2.src = "./assets/estados-unidos.png";
+        resultado2.textContent = new Intl.NumberFormat("en-US", {
             style: "currency",
-            currency: "BRL"
-        }).format(input);
-
-        resultado2.textContent = new Intl.NumberFormat("en-UK", {
-            style: "currency",
-            currency: "EUR"
-        }).format(input / valorEuro);
-
-        imgResultado1.src = "./assets/brasil 2 (1).png";
-        imgResultado2.src = "./assets/Euro.png";
-
-        paragraphCurrency1.textContent = "Real";
-        paragraphCurrency2.textContent = "Euro";
-
-
+            currency: "USD"
+        }).format(input / valorDolar);
     }
-
-    if (currecyMoeda1 === "euro" && currecyMoeda2 === "real") {
-        resultado1.textContent = new Intl.NumberFormat("pt-br", {
+    if (currecyMoeda1.value === "coin") {
+        paragraphCurrency1.textContent = "Bitcoin";
+        imgResultado1.src = "./assets/bitcoin 1.png";
+        resultado1.textContent = new Intl.NumberFormat("pt-SV", {
             style: "currency",
-            currency: "BRL"
-        }).format(input);
-
-        resultado2.textContent = new Intl.NumberFormat("en-UK", {
+            currency: "BTC"
+        }).format(input / valorBitcoin);
+    }
+    if (currecyMoeda2.value === "coin") {
+        paragraphCurrency2.textContent = "Bitcoin";
+        imgResultado2.src = "./assets/bitcoin 1.png";
+        resultado2.textContent = new Intl.NumberFormat("pt-SV", {
             style: "currency",
-            currency: "EUR"
-        }).format(input / valorEuro);
+            currency: "BTC"
+        }).format(input / valorBitcoin);
+    }
+    if (currecyMoeda1.value === "libra") {
+        paragraphCurrency1.textContent = "Libra Esterlina";
+        imgResultado1.src = "./assets/libra 1.png";
+        resultado1.textContent = new Intl.NumberFormat("en-GB", {
+            style: "currency",
+            currency: "GBP"
+        }).format(input / valorLibra);
+    }
+    if (currecyMoeda2.value === "libra") {
+        paragraphCurrency2.textContent = "Libra Esterlina";
+        imgResultado2.src = "./assets/libra 1.png";
+        resultado2.textContent = new Intl.NumberFormat("en-GB", {
+            style: "currency",
+            currency: "GBP"
+        }).format(input / valorLibra);
+    }
+    if (currecyMoeda1.value === "euro") {
+        paragraphCurrency1.textContent = "Euro";
+        imgResultado1.src = "./assets/Euro.png";
         resultado1.textContent = new Intl.NumberFormat("en-UK", {
             style: "currency",
             currency: "EUR"
         }).format(input / valorEuro);
-
-        resultado2.textContent = new Intl.NumberFormat("pt-br", {
-            style: "currency",
-            currency: "BRL"
-        }).format(input);
-
-        imgResultado1.src = "./assets/Euro.png";
-        imgResultado2.src = "./assets/brasil 2 (1).png";
-
-        paragraphCurrency1.textContent = "Euro";
-        paragraphCurrency2.textContent = "Real";
     }
+    if (currecyMoeda2.value === "euro") {
+        paragraphCurrency2.textContent = "Euro";
+        imgResultado2.src = "./assets/Euro.png";
+        resultado2.textContent = new Intl.NumberFormat("en-UK", {
+            style: "currency",
+            currency: "EUR"
+        }).format(input / valorEuro);
+    }
+}
 
-
-
-} 
+botao.addEventListener("click", conversorDeCurrency)
+currecyMoeda2.addEventListener("change", currencyTodos)
+currecyMoeda1.addEventListener("change", currencyConverter)
