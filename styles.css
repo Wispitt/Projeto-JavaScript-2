@@ -90,6 +90,11 @@ main {
     margin-left: 18px;
 }
 
+.paragraph-2 {
+    text-align: center;
+    font-size: 12px;
+}
+
 .divs {
     display: flex;
     justify-content: center;
